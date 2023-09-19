@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    image: game2048-node:1.0.0
+    container_name: app
+    ports:
+     - "8080:8080"
+    command: ["node", "server.js"]
+  another_app:
+    image: game2048-node:1.0.0
+    container_name: another_app
+    ports:
+     - "666:8080"
+    command: ["node", "server.js"]
